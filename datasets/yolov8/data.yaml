@@ -1,0 +1,4 @@
+train: F:/python_project/badminton_detect/yolo_project/datasets/images
+val: F:/python_project/badminton_detect/yolo_project/datasets/images
+nc: 1
+names: ['badminton']
