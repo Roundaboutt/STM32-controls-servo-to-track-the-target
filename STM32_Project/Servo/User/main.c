@@ -56,8 +56,8 @@ int main(void)
 				else if(tilt_angle < -135) tilt_angle = -135;
 				
                 // 发送指令控制两个舵机
-                FSUS_SetServoAngle(SERVO_UART, PAN_SERVO_ID, pan_angle, 20, 0);
-                FSUS_SetServoAngle(SERVO_UART, TILT_SERVO_ID, tilt_angle, 20, 0);
+                FSUS_SetServoAngle(SERVO_UART, PAN_SERVO_ID, pan_angle, 1, 0);
+                FSUS_SetServoAngle(SERVO_UART, TILT_SERVO_ID, tilt_angle, 1, 0);
             }
             else
             {

@@ -5,9 +5,9 @@ class Control:
     def __init__(self):
         self.ser = serial.Serial('COM3', 115200)
 
-        self.kp = 0.45
-        self.ki = 0.02
-        self.kd = 0.15
+        self.kp = 0.7
+        self.ki = 0.05
+        self.kd = 0.4
 
         self.last_error_x = 0
         self.integral_x = 0
@@ -47,6 +47,7 @@ class Control:
 
         output_x, self.last_error_x, self.integral_x = self.pid_control(
             error_x, self.last_error_x, self.integral_x, self.kp, self.ki, self.kd)
+        
         output_y, self.last_error_y, self.integral_y = self.pid_control(
             error_y, self.last_error_y, self.integral_y, self.kp, self.ki, self.kd)
 
